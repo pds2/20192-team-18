@@ -1,5 +1,5 @@
 <h1>Gerenciador de eventos</h1>
-Esse trabalho tem a finalidade de criar um sistema para que alunos e departamentos da UFMG possam criar ou consultar eventos que acontecem na UFMG.
+Esse trabalho tem a finalidade de criar um sistema para que alunos e departamentos da UFMG possam criar ou consultar eventos que acontecem na universidade.
 
 <h2>User stories</h2>
 
@@ -8,7 +8,6 @@ Esse trabalho tem a finalidade de criar um sistema para que alunos e departament
 | Classe: Usuário                           |                       |
 |-------------------------------------------|-----------------------|
 | Responsabilidades:                        | Colaborações:         |
-|   Saber seu nome;                         |                       |
 |   Saber se é aluno;                       |                       |
 |   Saber seu departamento;                 |                       | 
 
@@ -17,13 +16,14 @@ Esse trabalho tem a finalidade de criar um sistema para que alunos e departament
 | Responsabilidades:                        | Colaborações:         |
 |   Saber seu departamento                  |                       |
 
+
 | Classe: Terminal                                                     |                       |
 |----------------------------------------------------------------------|-----------------------|
 | Responsabilidades:                                                   | Colaborações:         |
-|   Saber se que está acessando é usuário ou divulgador;               |                       |
+|   Saber se quem está acessando é usuário ou divulgador;              |                       |
 |   Saber a data de pesquisa;                                          |                       |
-|   Ser capaz de criar gerenciador de evento para usuário              |                       |
-|   Ser capaz de criar gerenciador de evento para divulgador           |                       |
+|   Ser capaz de adequar o formato da data para pesquisa               |                       |
+
 
 | Classe: Pesquisa                                                     |                       |
 |----------------------------------------------------------------------|-----------------------|
@@ -33,12 +33,12 @@ Esse trabalho tem a finalidade de criar um sistema para que alunos e departament
 |   Poder imprimir eventos                                             |                       |
   
 
-| Classe: GerenciadorEventosUsario                                     |Super Classe: pesquisa |
+| Classe: GerenciadorUsario                                     |Super Classe: pesquisa |
 |----------------------------------------------------------------------|-----------------------|
 | Responsabilidades:                                                   |Colaborações: Terminal |
 |   Poder consultar eventos                                            |                       |
 
-| Classe: GerenciadorEventosDivulgador                                 |Super Classe: pesquisa |
+| Classe: GerenciadorDivulgador                                        |Super Classe: Pesquisa |
 |----------------------------------------------------------------------|-----------------------|
 | Responsabilidades:                                                   |Colaborações: Terminal |
 |   Poder consultar eventos                                            |                       |
