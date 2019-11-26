@@ -5,10 +5,10 @@ Esse trabalho tem a finalidade de criar um sistema para que alunos e departament
 
 <h2>CRC</h2>
 
-Classe Pessoa: 
-------------------------- | ------
-Saber seu nome            | 
-Saber se é aluno          | 
-Saber qual o departamento | 
-
+|<b>Classe Pessoa:<b>                          |
+|------------------------- | ------------------|
+|Responsabilidades:        |Colaborações:      | 
+|Saber se é aluno          |                   |
+|Saber qual o departamento |                   |
+|Saber qual o departamento |                   |        
 
