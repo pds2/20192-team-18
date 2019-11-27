@@ -7,7 +7,7 @@ Pesquisa::Pesquisa(Usuario _usuario, Departamento _departamento){
 }
 
 Pesquisa::~Pesquisa();
-v oidPesquisa::pesquisar() = 0;
-void Pesquisa::imprimirPesquisa(){
+virtual void Pesquisa::pesquisar() = 0;
+virtual void Pesquisa::imprimirPesquisa(){
     std::cout << algo << " ";
 }

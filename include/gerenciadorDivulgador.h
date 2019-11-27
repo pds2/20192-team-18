@@ -1,12 +1,16 @@
+#ifndef gerenciadorDivulgador_h
+#define gerenciadorDivulgador_h
 #include <iostream>
-#include "terminal.h"
-#include "pesquisar.h"
-#include "usuario.h"
+#include <string.h>
+#include "evento,h"
+#include "pesquisa.h"
+#include "departamento.h"
 
 
 class GerenciadorDivulgador : public pesquisa{
     private:
-        int indexador;
+        int id;
+        int departamento_;
    
     public:
 
@@ -18,5 +22,7 @@ class GerenciadorDivulgador : public pesquisa{
         void removerEvento();
         void adicinonarEvento();
         void alterarEvento();
+        
 
-}
+};
+#endif

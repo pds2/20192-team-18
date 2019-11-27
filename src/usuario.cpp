@@ -9,5 +9,10 @@ Usuario::Usuario(bool _aluno, int _departamento){
 Usuario::~Usuario(){
 }
 
+bool Usuario::retornarAluno(){
+    return this->aluno;
+}
 
-
+int Usuario::retornarDepartamento{
+    return this->departamento;
+}

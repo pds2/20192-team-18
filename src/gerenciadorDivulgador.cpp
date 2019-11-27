@@ -14,12 +14,12 @@ GerenciadosUsuario::Distribuidor() {
 }
 
 //Achar evento especifico para o proprietario alterar ou remover
-virtual void GerenciadosUsuario :: pesquisar(){
+virtual void GerenciadorDepartamento :: pesquisar(){
     
 }
 
 //Imprimir todas as funções do dia escolhido
-virtual void GerenciadorUsuario::imprimirPesquisa(){
+virtual void GerenciadorDepartamento ::imprimirPesquisa(){
     
 }
 
