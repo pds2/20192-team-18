@@ -12,7 +12,7 @@ class Terminal{
         int dataPesquisa;
     
     public:
-        Terminal(int _tipo, int _dataPesquisa);
+        Terminal(int type, int _dataPesquisa);
         ~Terminal();
 
         int adequarData();

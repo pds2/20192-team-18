@@ -1,4 +1,4 @@
-#include "divulgador.h"
+#include "departamento.h"
 #include "usuario.h"
 #include "evento.h"
 #include "gerenciadorDivulgador.h"
@@ -11,3 +11,7 @@
 
 #define USUARIO 0
 #define DIVULAGADOR 1
+
+int main(){
+    
+}

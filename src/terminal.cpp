@@ -1,8 +1,8 @@
 #include <iostream>
-#include <terminal.h>
+#include "terminal.h"
 
-class Terminal(int _tipo, int _dataPesquisa){
-    this->tipo = _tipo
+Terminal:: Terminal (int type, int _dataPesquisa){
+    this->tipo = type;
     this->dataPesquisa = _dataPesquisa;
 }
 

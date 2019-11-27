@@ -9,7 +9,7 @@ class Usuario{
         int departamento;
     
     public:
-        Usuario(int _tipo, int _dataPesquisa);
+        Usuario(bool _tipo, int _dataPesquisa);
         ~Usuario();
         bool retornarAluno();
         int retornarDepartamento();

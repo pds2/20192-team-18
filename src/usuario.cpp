@@ -13,6 +13,6 @@ bool Usuario::retornarAluno(){
     return this->aluno;
 }
 
-int Usuario::retornarDepartamento{
+int Usuario::retornarDepartamento(){
     return this->departamento;
 }
