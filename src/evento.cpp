@@ -8,8 +8,35 @@ Evento::Evento(int _id, std::string _nome, int _inicio, int _termino, int _publi
     this->termino = _termino;
     this->publico = _publico;
     this->local = _local;
-    this->descricao = _descricao
-
+    this->descricao = _descricao;
 }
 
-Evento::~Evento();
+
+
+Evento::~Evento(){
+}
+
+int Evento::_id(){
+    
+}
+std::string Evento::_nome(){
+    
+}
+int Evento::_inicio(){
+    
+}
+int Evento:: _termino(){
+    
+}
+int Evento:: _publico(){
+    
+}
+std::string Evento:: _local(){
+    
+}
+std::string  Evento:: _descricao(){
+    
+}
+
+
+

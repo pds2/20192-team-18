@@ -14,16 +14,18 @@ class Evento{
         std::string descricao;
 
     public:
-        Evento(std::string _id, std::string _nome, int _inicio, int _termino, int _publico, std::string _local, std::string _descricao);
-         ~Evento();
+        Evento(int _id, std::string _nome, int _inicio, int _termino, int _publico, std::string _local, std::string _descricao);
+        ~Evento();
+        
+        int _id();
+        std::string _nome();
+        int _inicio();
+        int _termino();
+        int _publico();
+        std::string _local();
+        std::string _descricao();
 
-         int _id();
-         std::string _nome();
-         int _inicio();
-         int _termino();
-         int _publico();
-         std::string _local();
-         std::string _descricao();
+
         
 };
 #endif

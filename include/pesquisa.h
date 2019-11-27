@@ -3,7 +3,7 @@
 #include <iostream>
 #include "usuario.h"
 #include "departamento.h"
-#include "terminal"
+#include "terminal.h"
 #include <string.h>
 
 class Pesquisa{

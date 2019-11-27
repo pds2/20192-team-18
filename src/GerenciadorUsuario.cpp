@@ -1,18 +1,18 @@
 #include "gerenciadorUsuario.h"
 #include <iostream>
 
-GerenciadosUsuario:: GerenciadorUsuario(int _data) : Pesquisar(_usuario, _departamento){
+GerenciadorUsuario:: GerenciadorUsuario(int _data) : Pesquisar(_usuario, _departamento){
     this->data = _data;
 }
 
-GerenciadosUsuario::~Distribuidor() {
+GerenciadorUsuario::~Distribuidor() {
 }
 
-GerenciadosUsuario::Distribuidor() {
+GerenciadorUsuario::Distribuidor() {
 }
 
 //Escolher imprimir eventos de departamentos especificos.
-virtual void GerenciadosUsuario :: pesquisar(){
+virtual void GerenciadorUsuario :: pesquisar(){
     
 }
 //Imprimir todas as funções do dia escolhido

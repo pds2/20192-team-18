@@ -2,7 +2,7 @@
 #define gerenciadorDivulgador_h
 #include <iostream>
 #include <string.h>
-#include "evento,h"
+#include "evento.h"
 #include "pesquisa.h"
 #include "departamento.h"
 
@@ -21,7 +21,7 @@ class GerenciadorDivulgador : public pesquisa{
         virtual void imprimirPesquisa();
         void removerEvento();
         void adicinonarEvento();
-        void alterarEvento();
+        
         
 
 };

@@ -7,11 +7,11 @@
 
 
 class Terminal{
-    Private:
+    private:
         int tipo;
         int dataPesquisa;
     
-    Public:
+    public:
         Terminal(int _tipo, int _dataPesquisa);
         ~Terminal();
 
