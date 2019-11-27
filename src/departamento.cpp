@@ -2,7 +2,7 @@
 #include "departamento.h"
 
 Departamento::Departamento(std::string nome){
-    this->departamento = nome;
+    //this->departamento = nome;
 }
 
 Departamento::~Departamento(){

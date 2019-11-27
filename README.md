@@ -11,7 +11,7 @@ Esse trabalho tem a finalidade de criar um sistema para que alunos e departament
 |   Saber se é aluno;                       |                       |
 |   Saber seu departamento;                 |                       | 
 
-| Classe: Divulgador                        |                       |
+| Classe: Departamento                      |                       |
 |-------------------------------------------|-----------------------|
 | Responsabilidades:                        | Colaborações:         |
 |   Saber seu departamento                  |                       |
@@ -33,7 +33,7 @@ Esse trabalho tem a finalidade de criar um sistema para que alunos e departament
 |   Poder imprimir eventos                                             |                       |
   
 
-| Classe: GerenciadorUsario                                     |Super Classe: pesquisa |
+| Classe: GerenciadorUsario                                            |Super Classe: pesquisa |
 |----------------------------------------------------------------------|-----------------------|
 | Responsabilidades:                                                   |Colaborações: Terminal |
 |   Poder consultar eventos                                            |                       |
@@ -43,14 +43,13 @@ Esse trabalho tem a finalidade de criar um sistema para que alunos e departament
 | Responsabilidades:                                                   |Colaborações: Terminal |
 |   Poder consultar eventos                                            |                       |
 |   Poder adicionar eventos                                            |                       |
-|   Poder alterar evento                                               |                       |
-|   Poder  Salvar evento                                               |                       |
+|   Poder remover evento                                               |                       |
 
 | Classe: Eventos                                                      |                            |
 |----------------------------------------------------------------------|----------------------------|
 | Responsabilidades:                                                   |Colaborações:               |
-|   Saber nome do evento                                               |GerenciadorEventosUsuario   |
-|   Saber o inicio do evento                                           |GerenciadorEventosDivulgador|
+|   Saber nome do evento                                               |GerenciadorUsuario          |
+|   Saber o inicio do evento                                           |GerenciadorDivulgador       |
 |   Saber o término do evento                                          |                            |
 |   Saber o público do evento                                          |                            |
 |   Saber o local do evento                                            |                            |
@@ -60,7 +59,7 @@ Esse trabalho tem a finalidade de criar um sistema para que alunos e departament
 | Classe: EventosPagos                                                 |Super Classe: Eventos       |
 |----------------------------------------------------------------------|----------------------------|
 | Responsabilidades:                                                   |Colaborações:               |
-|   Saber o valor do evento                                            |GerenciadorEventosUsuario   |
-|   Ser capaz de adicionar um valor na descrição do evento             |GerenciadorEventosDivulgador|
+|   Saber o valor do evento                                            |GerenciadorUsuario          |
+|   Ser capaz de adicionar um valor na descrição do evento             |GerenciadorDivulgador       |
 
 

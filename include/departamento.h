@@ -1,3 +1,6 @@
+#ifndef departamento_h
+#define departamento_h
+#include <string.h>
 #include <iostream>
 
 // Definindo uma constante para representar cada departamento da UFMG
@@ -95,13 +98,12 @@
 #define ZOO 91
 
 class Departamento{
-    Private:
-        int departamento;
+    private:
+        std::string departamento;
 
-    Public:
+    public:
         Departamento(std::string nome);
         ~Departamento();
-        int retornarNumeroReferencia();
-
-
-}
+        int retornarReferencia();
+};
+#endif
