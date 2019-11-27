@@ -7,18 +7,20 @@
 #include "departamento.h"
 
 
-class GerenciadorDivulgador : public pesquisa{
+class GerenciadorDivulgador /*: public Pesquisa*/{
     private:
         int id;
         int departamento_;
    
     public:
 
-        GerenciadorUsuario(int _data);
-        ~GerenciadorUsuario()
-        GerenciadorUsuario();
-        virtual void pesquisar(int indexador);
-        virtual void imprimirPesquisa();
+        GerenciadorDivulgador();
+        ~GerenciadorDivulgador();
+        
+        
+        //void pesquisar();
+        //void imprimirPesquisa() override;
+        
         void removerEvento();
         void adicinonarEvento();
         

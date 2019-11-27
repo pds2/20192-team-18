@@ -7,19 +7,19 @@
 #include "departamento.h"
 
 
-class GerenciadorUsuario : public pesquisa{
+class GerenciadorUsuario /*: public Pesquisa*/{
 
     private:
         int id;
 
     public:
 
-        GerenciadorUsuario(int _data);
-        ~GerenciadorUsuario()
-        GerenciadorUsuario();
 
-        virtual void pesquisar(int indexador);
-        virtual void imprimirPesquisa();
+        GerenciadorUsuario();
+        ~GerenciadorUsuario();
+        
+
+       
 
 };
 #endif

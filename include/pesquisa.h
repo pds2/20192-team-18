@@ -7,15 +7,15 @@
 #include <string.h>
 
 class Pesquisa{
-    private:
+    public:
         bool aluno;
         int departamento;
         int data;
     
-    public:
+    
         Pesquisa(Usuario _usuario, Departamento _departamento, Terminal _terminal);
-        ~Persquisa();
-        void pesquisar() = 0;
-        void imprimirPesquisa(int data);
+        
+        virtual void pesquisar() = 0;
+        virtual void imprimirPesquisa();
 };
 #endif
