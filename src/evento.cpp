@@ -1,14 +1,17 @@
 #include "evento.h"
 #include <iostream>
+#include <fstream>
 
-Evento::Evento(int _id, std::string _nome, int _inicio, int _termino, int _publico, std::string _local, std::string _descricao){
-    this->id = _id;
+
+Evento::Evento(int _dep, std::string _nome, int _ano, int _mes, int _dia, std::string _descricao, std::string _local, std::string _horario){
+    this->dep = _dep;
     this->nome = _nome;
-    this->inicio = _inicio;
-    this->termino = _termino;
-    this->publico = _publico;
+    this->ano = ano;
+    this->mes = _mes;
+    this->dia = _dia;
     this->local = _local;
     this->descricao = _descricao;
+    this->horario = _horario;
 }
 
 
@@ -16,27 +19,24 @@ Evento::Evento(int _id, std::string _nome, int _inicio, int _termino, int _publi
 Evento::~Evento(){
 }
 
-int Evento::_id(){
+void Evento::armazenar_txt(){
+    std::ofstream saida("eventos.txt", std::ofstream::app);
+    saida << "****************"<<std::endl;
+    saida << dep << std::endl;
+    saida << nome << std::endl;
+    saida << ano << std::endl;
+    saida << mes << std::endl;
+    saida << dia << std::endl;
+    saida << local << std::endl;
+    saida << descricao <<std::endl;
+    saida << "****************"<<std::endl;
+
+
+    
+
     
 }
-std::string Evento::_nome(){
-    
-}
-int Evento::_inicio(){
-    
-}
-int Evento:: _termino(){
-    
-}
-int Evento:: _publico(){
-    
-}
-std::string Evento:: _local(){
-    
-}
-std::string  Evento:: _descricao(){
-    
-}
+
 
 
 

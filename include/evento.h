@@ -5,25 +5,20 @@
 
 class Evento{
     private:
-        int id;
+        int dep;
         std::string nome;
-        int inicio;
-        int termino;
-        int publico; // pode ser mais de um
-        std::string local;
+        int ano;
+        int mes;
+        int dia; // pode ser mais de um
         std::string descricao;
+        std::string local;
+        std::string horario;
 
     public:
-        Evento(int _id, std::string _nome, int _inicio, int _termino, int _publico, std::string _local, std::string _descricao);
+        Evento(int _dep, std::string _nome, int _ano, int _mes, int _dia, std::string _descricao, std::string _local, std::string _horario);
         ~Evento();
         
-        int _id();
-        std::string _nome();
-        int _inicio();
-        int _termino();
-        int _publico();
-        std::string _local();
-        std::string _descricao();
+        void armazenar_txt();
 
 
         

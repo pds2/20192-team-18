@@ -10,19 +10,20 @@
 class GerenciadorDivulgador /*: public Pesquisa*/{
     private:
         int id;
-        int departamento_;
+        int departamento;
    
     public:
 
-        GerenciadorDivulgador();
+        GerenciadorDivulgador(int dep);
         ~GerenciadorDivulgador();
         
         
         //void pesquisar();
         //void imprimirPesquisa() override;
         
-        void removerEvento();
         void adicinonarEvento();
+        void removerEvento();
+        
         
         
 

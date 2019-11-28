@@ -6,9 +6,8 @@ Pesquisa::Pesquisa(Usuario _usuario, Departamento _departamento, Terminal _termi
     this->departamento =0;
 }
 
+void Pesquisa::pesquisarNome() {}
+void Pesquisa::pesquisarData() {}
+  
 
-
-void Pesquisa::imprimirPesquisa(){    
-
-    std::cout << "algo" << " ";
-}
+    
