@@ -7,19 +7,18 @@
 #include "departamento.h"
 
 
-class GerenciadorUsuario /*: public Pesquisa*/{
-
+class GerenciadorUsuario : public Pesquisa{
     private:
-        int id;
+        std::string usuario;
 
     public:
-
-
         GerenciadorUsuario();
         ~GerenciadorUsuario();
+        void imprimirTexto()override;
+        void verEventos();
         
-
-       
-
+        
+        
+        
 };
 #endif

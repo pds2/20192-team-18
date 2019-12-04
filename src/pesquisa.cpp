@@ -1,13 +1,24 @@
 #include <iostream>
 #include "pesquisa.h"
 
-Pesquisa::Pesquisa(Usuario _usuario, Departamento _departamento, Terminal _terminal){
-    this->aluno = 0;
-    this->departamento =0;
+Pesquisa::Pesquisa(){
 }
 
-void Pesquisa::pesquisarNome() {}
-void Pesquisa::pesquisarData() {}
+Pesquisa::~Pesquisa(){
+}
+
+void Pesquisa::verEventos() {
+    std::ifstream eventos;
+    std::string linha;
+    eventos.open("eventos.txt");
+    while (!eventos.eof()){
+        getline(eventos, linha);
+        std::cout<< linha << std::endl;
+    }
+    eventos.close();
+    std::cout<< std::endl;
+}
+void Pesquisa::imprimirTexto(){}
   
 
     

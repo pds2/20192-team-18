@@ -1,17 +1,10 @@
 #include "departamento.h"
-#include "usuario.h"
 #include "evento.h"
 #include "gerenciadorDivulgador.h"
 #include "gerenciadorUsuario.h"
-#include "terminal.h"
-#include "pesquisa.h"
-
 #include <iostream>
 #include <string.h>
 #include <fstream>
-
-
-#include <ctype.h>
 
 #define USUARIO 0
 #define DIVULAGADOR 1
@@ -19,87 +12,75 @@
 int main(){
 
     int on_off = 1;
-    int indentificador = -1;
-    int dep = 0;
-    int linhas = 0;
+    int menuPrincipal = 0;
+    int menuDivulgador = 0;
+    int menuDivulgador2 = 0;
+    std::string dep;
+    Departamento *departamento = new Departamento();
 
     while(on_off == 1){
+        std::cout << "------------------------" << std::endl;
         std::cout << std::endl <<"BEM-VINDO! O QUE VOCÊ DESEJA FAZER?" << std::endl << std::endl;
-        std::cout << "Digite 1 se você gostaria de encontrar algum evento"<< std::endl ;
-        std::cout << "Digite 2 se você gostaria de divulgar algum evento" << std::endl;
-        std::cout << "Digite 3 se você gostaria de sair do programa"<< std::endl <<std::endl ;
+        std::cout << "DIGITE (1) SE VOCÊ É UM USUÁRIO COMUM E GOSTARIA DE VER OS EVENTO"<< std::endl ;
+        std::cout << "DIGITE (2) PARA ALGUM DEPARTAMENTO DIVULGAR OU VER OS EVENTOS" << std::endl;
+        std::cout << "DIGITE (3) PARA SAIR DO PROGRAMA"<< std::endl;
+        std::cout << "------------------------" << std::endl;
+        std::cin>>menuPrincipal;
 
-        //Aqui garantimos que os números vão estar dentro do especificado
-        std::cin >> indentificador;
-        while((!std::cin || indentificador < 1 || indentificador > 3)){
-            std::cout << "Valor inválido. Escolha um número entre 0 e 3" << std::endl;
-            std::cin >> indentificador;
-        }
-            
-        
-        if(indentificador == 3){
-            std::cout << "Programa encerrrado"<< std::endl;
+        //O programa encerra
+        if(menuPrincipal== 3){
+            std::cout << "Programa encerrrado" << std::endl;
             return 0;
         }
 
-        if(indentificador == 2){
-            std::cout <<"QUAL É O DEPARTAMENTO RESPONSÁVEL PELO EVENTO?"<< std::endl;
-            std::cout << "OBS:Essa é uma versão de teste do programa para apresentação."<< std::endl;;
-            std::cout << "Logo, inicialmente só serão aceitos os departamentos PROGRAD, DCC ,MAT e FIS!"<< std::endl;
-            std::cout << "Digite 0 se o evento é responsabildade da PROGRAD"<< std::endl;
-            std::cout << "Digite 1 se o evento é responsabildade do departamento DCC"<< std::endl ;
-            std::cout << "Digite 2 se o evento é responsabildade do departamento MAT"<< std::endl ;
-            std::cout << "Digite 3 se o evento é responsabildade do departamento FIS"<< std::endl ;
+        //Opçoes do menu do divulgador(departamentos)
+        if(menuPrincipal == 2){
 
-            //Aqui garantimos que os números vão estar dentro do especificado
-            std::cin >> dep;
-            while((!std::cin || dep < 0 || dep > 3)){
-            std::cout << "Valor inválido. Escolha um número entre 0 e 3" << std::endl;
-            std::cin >> dep;            
-            }
-
-
-
-
-            std::cout << "Teste" << std::endl;
-
-            GerenciadorDivulgador *a = new GerenciadorDivulgador(dep);
-            a->adicinonarEvento();
-            //delete a;
-
-            std::cout << "Teste2" << std::endl;
-
-
-
-
-
-
-
-
+            while(menuDivulgador != 1 ){
+                std::cout << "------------------------" << std::endl;
+                std::cout <<"|DIGITE (1) PARA INFORMAR O NOME DO DEPARTAMENTO QUE DESEJA ADICIONAR OU VER OS EVENTOS [OBS: DEVE SER DIGITADO A SIGLA DO DEPARTAMENTO EM LETRA MAIUSCULA, POR EXEMPLO: \"DCC\".] DIGITE (2) CASO DESEJE VER A LISTA DE TODOS OS DEPARTAMENTOS QUE ESSE PROGRAMA RECONHECE|"<<std::endl;
+                std::cout << "------------------------" << std::endl;
+                std::cin>>menuDivulgador;
             
+                if(menuDivulgador == 1){
+                    std::cout << "------------------------" << std::endl;
+                    std::cout <<"INFORME O NOME DO DEPARTAMENTO:" <<std::endl;
+                    std::cout << "------------------------" << std::endl;
+                    std::cin>>dep;
+                    GerenciadorDivulgador *a = new GerenciadorDivulgador(dep);
+
+                    std::cout << "------------------------" << std::endl;
+                    std::cout<<"DIGITE (1) PARA DIVULGAR UM EVENTO OU (2) PARA VER OS EVENTOS"<<std::endl;
+                    std::cout << "------------------------" << std::endl;
+                    std::cin>>menuDivulgador2;
+
+                    if(menuDivulgador2 == 1){
+                        a->adicinonarEvento();
+                    }
+                    if(menuDivulgador2 == 2){
+                        a->imprimirTexto();
+                        a->verEventos();
+                    }
+                }
+                if(menuDivulgador == 2){
+                    departamento->imprimirDepartamentos();
+                    std::cout <<"*********DEPARTAMENTOS LISTADOS ACIMA!********" <<std::endl <<std::endl;
+                }
+            }
         }
 
+        //Opções do menu usuário
+        if(menuPrincipal == 1){
+            GerenciadorUsuario *a = new GerenciadorUsuario();
+            a->imprimirTexto();
+            a->verEventos();
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        std::cout << "------------------------" << std::endl;
         std::cout <<"DESEJA CONTINUAR NO PROGRAMA? DIGITE \"1 PARA SIM\" E \"0 PARA NÃO\""<< std::endl;
+        std::cout << "------------------------" << std::endl;
         std::cin >> on_off;
-        while((!std::cin || on_off < 0 ||on_off > 1)){
-            std::cout << "VALOR INVALIDO!!DIGITE \"1 PARA SIM\" E \"0 PARA NÃO\"" << std::endl;
-            std::cin >> on_off;
-        }
+        
 
         
 

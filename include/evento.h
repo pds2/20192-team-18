@@ -3,24 +3,19 @@
 #include <string.h>
 #include <iostream>
 
+
 class Evento{
     private:
-        int dep;
+        std::string dep;
         std::string nome;
         int ano;
         int mes;
-        int dia; // pode ser mais de um
+        int dia; 
         std::string descricao;
-        std::string local;
-        std::string horario;
-
+       
     public:
-        Evento(int _dep, std::string _nome, int _ano, int _mes, int _dia, std::string _descricao, std::string _local, std::string _horario);
+        Evento(std::string _dep, std::string _nome, int _ano, int _mes, int _dia, std::string _descricao);
         ~Evento();
-        
         void armazenar_txt();
-
-
-        
 };
 #endif

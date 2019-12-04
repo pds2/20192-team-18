@@ -5,61 +5,36 @@ Esse trabalho tem a finalidade de criar um sistema para que alunos e departament
 
 <h2>CRC</h2>
 
-| Classe: Usuário                           |                       |
-|-------------------------------------------|-----------------------|
-| Responsabilidades:                        | Colaborações:         |
-|   Saber se é aluno;                       |                       |
-|   Saber seu departamento;                 |                       | 
+
 
 | Classe: Departamento                      |                       |
 |-------------------------------------------|-----------------------|
 | Responsabilidades:                        | Colaborações:         |
-|   Saber seu departamento                  |                       |
+|   Imprimir departamentos                  |                       |
 
 
-| Classe: Terminal                                                     |                       |
-|----------------------------------------------------------------------|-----------------------|
-| Responsabilidades:                                                   | Colaborações:         |
-|   Saber se quem está acessando é usuário ou divulgador;              |                       |
-|   Saber a data de pesquisa;                                          |                       |
-|   Ser capaz de adequar o formato da data para pesquisa               |                       |
 
-
-| Classe: Pesquisa                                                     |                       |
-|----------------------------------------------------------------------|-----------------------|
-| Responsabilidades:                                                   |Colaborações:          |
-|   Saber dos eventos registrados                                      |Terminal               |
-|   Poder pesquisiar evento                                            |Usuário                |
-|   Poder imprimir eventos                                             |                       |
-  
-
-| Classe: GerenciadorUsario                                            |Super Classe: pesquisa |
-|----------------------------------------------------------------------|-----------------------|
-| Responsabilidades:                                                   |Colaborações: Terminal |
-|   Poder consultar eventos                                            |                       |
+| Classe: GerenciadorUsario                                            |Super Classe: pesquisa   |
+|----------------------------------------------------------------------|-------------------------|
+| Responsabilidades:                                                   |Colaborações: Eventos    |
+|   Poder consultar eventos                                            |                         |
 
 | Classe: GerenciadorDivulgador                                        |Super Classe: Pesquisa |
 |----------------------------------------------------------------------|-----------------------|
-| Responsabilidades:                                                   |Colaborações: Terminal |
+| Responsabilidades:                                                   |Colaborações: Evento   |
 |   Poder consultar eventos                                            |                       |
 |   Poder adicionar eventos                                            |                       |
-|   Poder remover evento                                               |                       |
+|                                                                      |                       |
 
 | Classe: Eventos                                                      |                            |
 |----------------------------------------------------------------------|----------------------------|
 | Responsabilidades:                                                   |Colaborações:               |
-|   Saber nome do evento                                               |GerenciadorUsuario          |
-|   Saber o inicio do evento                                           |GerenciadorDivulgador       |
-|   Saber o término do evento                                          |                            |
-|   Saber o público do evento                                          |                            |
-|   Saber o local do evento                                            |                            |
+|   Saber nome do evento                                               |                            |
+|   Saber o dia do evento                                              |                            |
+|   Saber o mês do evento                                              |                            |
+|   Saber o ano do evento                                              |                            |
 |   Saber a descrição do evento                                        |                            |
 |   Poder registrar o evento                                           |                            |
 
-| Classe: EventosPagos                                                 |Super Classe: Eventos       |
-|----------------------------------------------------------------------|----------------------------|
-| Responsabilidades:                                                   |Colaborações:               |
-|   Saber o valor do evento                                            |GerenciadorUsuario          |
-|   Ser capaz de adicionar um valor na descrição do evento             |GerenciadorDivulgador       |
 
 

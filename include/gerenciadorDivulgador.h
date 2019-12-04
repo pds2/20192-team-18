@@ -1,31 +1,23 @@
 #ifndef gerenciadorDivulgador_h
 #define gerenciadorDivulgador_h
 #include <iostream>
-#include <string.h>
+#include <string>
 #include "evento.h"
 #include "pesquisa.h"
 #include "departamento.h"
 
 
-class GerenciadorDivulgador /*: public Pesquisa*/{
-    private:
-        int id;
-        int departamento;
+class GerenciadorDivulgador :public Pesquisa{
+    private: 
+        std::string departamento;
    
     public:
-
-        GerenciadorDivulgador(int dep);
+        GerenciadorDivulgador(std::string dep);
         ~GerenciadorDivulgador();
         
         
-        //void pesquisar();
-        //void imprimirPesquisa() override;
-        
+        void imprimirTexto()override;
+        void verEventos();
         void adicinonarEvento();
-        void removerEvento();
-        
-        
-        
-
 };
 #endif

@@ -1,0 +1,10 @@
+﻿*********** 
+DCC
+Nome: Palestra Inteligencia Artificial
+Data: 21/12/2019
+Descrição: Palestra para explicar os impactos da AI na sociedade
+-------------------------------------
+PROGAD
+Nome: Forró na praça de serviços
+Data: 4/12/2019
+Descrição: Venham participar do forró da praça de serviços! TOda quarta às 17h!
