@@ -22,19 +22,3 @@ void GerenciadorUsuario::verEventos(){
     eventos.close();
     std::cout<< std::endl;
 }
-
-
-
-
-
-
-
-
-//Escolher imprimir eventos de departamentos especificos.
-//virtual void GerenciadorUsuario :: pesquisar(){
-    
-//}
-//Imprimir todas as funções do dia escolhido
-//virtual void GerenciadorUsuario::imprimirPesquisa(){
-    
-//}

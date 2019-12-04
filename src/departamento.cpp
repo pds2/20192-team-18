@@ -2,8 +2,6 @@
 #include "departamento.h"
 
 Departamento::Departamento(){
-    //this->departamento = nome;
-    
 }
 
 Departamento::~Departamento(){

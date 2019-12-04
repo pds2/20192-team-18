@@ -3,6 +3,7 @@
 #include <string.h>
 #include <iostream>
 #include <fstream>
+
 class Departamento{
     public:
         Departamento();

@@ -69,39 +69,17 @@ int main(){
             }
         }
 
-        //Opções do menu usuário
+        // menu usuário
         if(menuPrincipal == 1){
             GerenciadorUsuario *a = new GerenciadorUsuario();
             a->imprimirTexto();
             a->verEventos();
         }
 
+        //encerrar progama
         std::cout << "------------------------" << std::endl;
         std::cout <<"DESEJA CONTINUAR NO PROGRAMA? DIGITE \"1 PARA SIM\" E \"0 PARA NÃO\""<< std::endl;
         std::cout << "------------------------" << std::endl;
         std::cin >> on_off;
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-        
     }
-    
-        
-
-
-
-
-
-
-    
 }

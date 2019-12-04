@@ -14,8 +14,6 @@ class GerenciadorDivulgador :public Pesquisa{
     public:
         GerenciadorDivulgador(std::string dep);
         ~GerenciadorDivulgador();
-        
-        
         void imprimirTexto()override;
         void verEventos();
         void adicinonarEvento();

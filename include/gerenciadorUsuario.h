@@ -16,9 +16,5 @@ class GerenciadorUsuario : public Pesquisa{
         ~GerenciadorUsuario();
         void imprimirTexto()override;
         void verEventos();
-        
-        
-        
-        
 };
 #endif
